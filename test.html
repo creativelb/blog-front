@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  // d =1 ;
+  // console.log(window.d);
+  function abc() {
+    console.log(a); //undei
+    // console.log(b); //func
+    console.log(c); //undei
+    // console.log(d); //baocuo
+
+    var a = b = 1;
+    var c = d = 2;
+    // function b() {
+    //   console.log('我是b');
+    // }
+    console.log(a); //1
+    console.log(b); //1
+    console.log(c); //2
+    console.log(window.d); //2
+  }
+  abc();
+  // console.log(a); //undei
+  console.log(b); //1
+  // console.log(c); //undei
+  console.log(d); //2
+</script>

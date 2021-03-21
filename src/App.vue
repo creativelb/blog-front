@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <head-back></head-back>
+    <image-viewer></image-viewer>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeadBack from '@/components/content/HeadBack/HeadBack.vue'
+import ImageViewer from '@/components/common/ImageViewer/ImageViewer.vue';
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {};
+  },
+  mounted() {},
+
   components: {
-    HelloWorld
-  }
-}
+    HeadBack,
+    ImageViewer
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("./assets/css/normalize.css");
+@import url("./assets/css/base.css");
+@import url("./assets/css/my-animation.css");
 </style>

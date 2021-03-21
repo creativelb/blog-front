@@ -1,0 +1,21 @@
+@keyframes largein {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes arrowupanddown{
+  0%,50%,100%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(4px);
+  }
+  75%{
+    transform: translateY(-4px);
+  }
+
+}
