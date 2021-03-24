@@ -11,108 +11,6 @@
     </div>
     <div class="content-wrapper">
       <div class="content">
-        <ul>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-        </ul>
         <router-view></router-view>
       </div>
       <div class="aboutme">
@@ -155,7 +53,7 @@ export default {
       }
       // 判断是否为固定定位
       if (
-        scrollTop >= document.documentElement.clientHeight -38 &&
+        scrollTop >= document.documentElement.clientHeight - 38 &&
         document.body.clientWidth > 700
       ) {
         this.isFix = true;
@@ -172,7 +70,9 @@ export default {
       ScrollTop(bgHeight, 300);
     },
     // 点击更多
-    moreClick() {},
+    moreClick() {
+      this.$router.push("/home/aboutme");
+    },
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll, true);
@@ -185,7 +85,7 @@ export default {
 
 <style scoped>
 .home {
-  background-color: #f3f3f3;
+  margin-bottom: 10px;
 }
 .bg {
   width: 100%;
@@ -233,7 +133,6 @@ export default {
 }
 .content {
   flex: 2;
-  margin-right: 30px;
 }
 .aboutme {
   flex: 1;
@@ -253,6 +152,9 @@ export default {
     width: 80%;
     margin: 0 auto;
   }
+  .content {
+    margin-right: 30px;
+  }
 }
 @media screen and (max-width: 700px) {
   .down {
@@ -267,5 +169,11 @@ export default {
     display: flex;
     flex-direction: column;
   }
+  .aboutme {
+    margin-top: 30px;
+  }
+  /* .content{
+    margin-right: 0;
+  } */
 }
 </style>

@@ -13,7 +13,7 @@
       />
     </div>
     <div class="icons">
-      <span class="icon"
+      <span class="icon" @click="wechatClick"
         ><i class="iconfont icon-weixin"></i
         ><span class="tips">wechat</span></span
       >
@@ -47,7 +47,8 @@
 </template>
 
 <script>
-import {showImageViewer} from "@/mixins/showImageViewer.js"
+import { showImageViewer } from "@/mixins/showImageViewer.js";
+import { mapMutations } from "vuex";
 export default {
   name: "AboutMeBox",
   mixins: [showImageViewer],
@@ -80,10 +81,15 @@ export default {
     moreClick() {
       this.$emit("moreClick");
     },
+    wechatClick() {
+      let wechatUrl = require('@/assets/img/wechat.jpg')
+      this.showImageViewer(wechatUrl)
+    },
     // showImgViewer(e) { //抽取到mixin中
     //   this.$store.commit("showImageViewer", e.target.src);
     //   console.log(e.target.src);
     // },
+    ...mapMutations(['showImageViewer'])
   },
 };
 </script>

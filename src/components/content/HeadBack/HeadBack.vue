@@ -120,7 +120,7 @@ export default {
             }
             break;
           case 2:
-            if (path.indexOf("/home/tags") !== -1) {
+            if (path.indexOf("/home/tag") !== -1) {
               return true;
             }
             break;
@@ -154,7 +154,7 @@ export default {
           url = "/home/category";
           break;
         case 2:
-          url = "/home/tags";
+          url = "/home/tag";
           break;
         case 3:
           url = "/home/reward";
@@ -180,8 +180,8 @@ export default {
   right: 0;
   z-index: 9;
 }
-.flow-layout {
-}
+/* .flow-layout {
+} */
 .head-box {
   background-color: rgba(40, 42, 44, 0.6);
 }
