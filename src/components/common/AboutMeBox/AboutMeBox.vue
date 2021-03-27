@@ -48,7 +48,7 @@
 
 <script>
 import { showImageViewer } from "@/mixins/showImageViewer.js";
-import { mapMutations } from "vuex";
+import { mapMutations } from 'vuex'
 export default {
   name: "AboutMeBox",
   mixins: [showImageViewer],
@@ -69,7 +69,7 @@ export default {
   },
   mounted() {
     this.aboutMeBoxWidth = this.$refs.aboutMeBox.clientWidth;
-    console.log("aboutMeBoxWidth" + this.aboutMeBoxWidth);
+    // console.log("aboutMeBoxWidth" + this.aboutMeBoxWidth);
   },
   methods: {
     copyEmail() {

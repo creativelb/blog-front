@@ -4,7 +4,7 @@ import { baseURL } from '@/assets/js/constant';
 
 let instance1 = axios.create({
   baseURL,
-  timeout: 3000,
+  // timeout: 3000,
   headers: {
     type: '0'
   }

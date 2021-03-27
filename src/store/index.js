@@ -8,11 +8,18 @@ export default new Vuex.Store({
     imageViewerData: {
       showFlag: false,
       imgUrl: ''
+    },
+    toastData: {
+      showFlag: false,
+      message: ''
     }
   },
-  getters:{
-    imageViewerData(state){
+  getters: {
+    imageViewerData(state) {
       return state.imageViewerData
+    },
+    toastData(state) {
+      return state.toastData
     }
   },
   mutations: {
@@ -25,6 +32,16 @@ export default new Vuex.Store({
     closeImageViewer(state) {
       state.imageViewerData.showFlag = false;
       state.imageViewerData.imgUrl = '';
+    },
+    // 显示ImageViewer
+    showToast(state, payload) {
+      state.toastData.showFlag = true;
+      state.toastData.message = payload;
+    },
+    // 关闭ImageViewer
+    closeToast(state) {
+      state.toastData.showFlag = false;
+      state.toastData.message = '';
     }
   }
 })

@@ -9,14 +9,15 @@
         >
           <i class="iconfont icon-shouye"></i><span>首页</span>
         </li>
-        <li
+        <!-- 分类没有做 -->
+        <!-- <li
           class="head-box-item"
           @click="switchPage(1, 0)"
           :class="{ 'head-box-item-active': headBoxItemActive(1) }"
         >
           <i class="iconfont icon-leimupinleifenleileibie2"></i
           ><span>分类</span>
-        </li>
+        </li> -->
         <li
           class="head-box-item"
           @click="switchPage(2, 0)"
@@ -50,14 +51,15 @@
         >
           <i class="iconfont icon-shouye"></i><span>首页</span>
         </li>
-        <li
+        <!-- 分类没有做 -->
+        <!-- <li
           class="mobile-box-item"
           @click="switchPage(1, 1)"
           :class="{ 'mobile-box-item-active': headBoxItemActive(1) }"
         >
           <i class="iconfont icon-leimupinleifenleileibie2"></i
           ><span>分类</span>
-        </li>
+        </li> -->
         <li
           class="mobile-box-item"
           @click="switchPage(2, 1)"
@@ -94,7 +96,7 @@ export default {
   },
   computed: {
     switchlayout() {
-      console.log(this.$route);
+      // console.log(this.$route);
       let flag;
       this.$route.path.indexOf("/detail") === -1
         ? (flag = true)
@@ -106,7 +108,6 @@ export default {
     },
     headBoxItemActive() {
       return function (index) {
-        console.log(index);
         let path = this.$route.path;
         switch (index) {
           case 0:
